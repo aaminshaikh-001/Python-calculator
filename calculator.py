@@ -1,5 +1,7 @@
 import math
 
+history = []
+
 while True:
     print("\n===== Python Calculator =====")
     print("1. Addition")
@@ -9,19 +11,34 @@ while True:
     print("5. Power")
     print("6. Modulus")
     print("7. Square Root")
-    print("8. Exit")
+    print("8. Show History")
+    print("9. Exit")
 
-    choice = input("Enter your choice (1-8): ")
+    choice = input("Enter your choice (1-9): ")
 
-    if choice == "8":
+    if choice == "9":
         print("Thank you for using the calculator!")
         break
+
+    if choice == "8":
+        print("\n===== Calculation History =====")
+
+        if history:
+            for calculation in history:
+                print(calculation)
+        else:
+            print("No calculations yet.")
+
+        continue
 
     if choice == "7":
         num = float(input("Enter a number: "))
 
         if num >= 0:
-            print("Square Root:", math.sqrt(num))
+            result = math.sqrt(num)
+            calculation = f"√{num} = {result}"
+            print("Result:", result)
+            history.append(calculation)
         else:
             print("Error: Square root of a negative number is not possible.")
 
@@ -32,28 +49,40 @@ while True:
         num2 = float(input("Enter second number: "))
 
         if choice == "1":
-            print("Result:", num1 + num2)
+            result = num1 + num2
+            calculation = f"{num1} + {num2} = {result}"
 
         elif choice == "2":
-            print("Result:", num1 - num2)
+            result = num1 - num2
+            calculation = f"{num1} - {num2} = {result}"
 
         elif choice == "3":
-            print("Result:", num1 * num2)
+            result = num1 * num2
+            calculation = f"{num1} × {num2} = {result}"
 
         elif choice == "4":
-            if num2 != 0:
-                print("Result:", num1 / num2)
-            else:
+            if num2 == 0:
                 print("Error: Cannot divide by zero.")
+                continue
+
+            result = num1 / num2
+            calculation = f"{num1} / {num2} = {result}"
 
         elif choice == "5":
-            print("Result:", num1 ** num2)
+            result = num1 ** num2
+            calculation = f"{num1} ^ {num2} = {result}"
 
         elif choice == "6":
-            if num2 != 0:
-                print("Result:", num1 % num2)
-            else:
+            if num2 == 0:
                 print("Error: Cannot calculate modulus with zero.")
+                continue
+
+            result = num1 % num2
+            calculation = f"{num1} % {num2} = {result}"
+
+        print("Result:", result)
+        history.append(calculation)
 
     else:
-        print("Invalid choice. Please select a number from 1 to 8.")
+        print("Invalid choice. Please select a number from 1 to 9.")
+        

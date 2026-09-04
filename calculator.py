@@ -1,3 +1,4 @@
+import math
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
@@ -7,3 +8,4 @@ print("Multiplication:", num1 * num2)
 print("Division:", num1 / num2)
 print("Power:", num1 ** num2)
 print("Modulus:", num1 % num2)
+print("Square Root:", math.sqrt(num1))

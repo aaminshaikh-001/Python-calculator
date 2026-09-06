@@ -1,63 +1,31 @@
-# 🧮 Python Calculator
+# Python Calculator
 
-A command-line calculator built with Python for performing common mathematical operations.
+A command-line calculator built with Python. This project provides basic arithmetic operations as well as several advanced mathematical features.
 
-## ✨ Features
+## Features
 
-* Addition
-* Subtraction
-* Multiplication
-* Division
-* User-friendly command-line interface
-* Basic input handling
-* Error handling for invalid operations
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Power
+- Modulus
+- Square Root
+- Factorial
+- Cube Root
+- Absolute Value
+- Calculation History
+- Clear History
+- Input Validation
+- Error Handling
 
-## 🛠️ Technologies
+## Requirements
 
-* Python
-* Git
-* GitHub
+- Python 3.x
 
-## 🚀 Getting Started
+## How to Run
 
-### 1. Clone the repository
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/aaminshaikh-001/Python-calculator.git
-```
-
-### 2. Open the project
-
-```bash
-cd Python-calculator
-```
-
-### 3. Run the calculator
-
-```bash
-python calculator.py
-```
-
-## 📌 Project Status
-
-🚧 This project is actively being improved with additional calculator features.
-
-## 🔮 Future Improvements
-
-* Percentage calculations
-* Square root
-* Power calculations
-* Calculation history
-* Improved input validation
-* Automated tests
-* More advanced mathematical operations
-
-## 👨‍💻 Author
-
-**Aamin Shaikh**
-
-BCA Student | AI & ML Enthusiast | Python & C++ Developer
-
----
-
-⭐ If you find this project useful, consider giving it a star.
